@@ -9,7 +9,7 @@ function App() {
     <h1>Codetech</h1>
     <p>pagina de teste</p>
     <p>projeto</p>
-    <p>codteech</p>
+   
     </>
   )
 }
