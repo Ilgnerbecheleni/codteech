@@ -3,7 +3,7 @@ name: Deploy to VPS
 on:
   push:
     branches:
-      - main  # Desencadeia o deploy em push para a branch main
+      - main
 
 jobs:
   deploy:
@@ -27,7 +27,7 @@ jobs:
       run: |
         ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
 
-    - name: Deploy to VPS
+    - name: Run deploy.sh on VPS
       uses: appleboy/ssh-action@v0.1.5
       with:
         host: ${{ secrets.VPS_HOST }}
