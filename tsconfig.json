@@ -1,15 +1,7 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "es2015"],
-    "jsx": "react-jsx",  // ou "react" para React 16 ou versões anteriores
-    "module": "esnext",
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "include": ["src"],  // ou ajuste conforme o diretório do seu código
-  "exclude": ["node_modules"]
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }
