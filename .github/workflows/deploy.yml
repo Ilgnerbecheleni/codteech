@@ -1,11 +1,39 @@
-- name: Deploy to VPS
-  uses: appleboy/ssh-action@v0.1.5
-  with:
-    host: ${{ secrets.VPS_HOST }}
-    username: ${{ secrets.VPS_USER }}
-    key: ${{ secrets.VPS_KEY }}
-    port: 22
-    passphrase: ${{ secrets.VPS_PASSPHRASE }}
-    script: |
-      cd /root/codteech
-      ./deploy.sh
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main  # Desencadeia o deploy em push para a branch main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2
+
+    - name: Set up SSH key
+      env:
+        SSH_KEY: ${{ secrets.VPS_DEPLOY_KEY }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SSH_KEY" > ~/.ssh/codteech_no_passphrase
+        chmod 600 ~/.ssh/codteech_no_passphrase
+        eval "$(ssh-agent -s)"
+        ssh-add ~/.ssh/codteech_no_passphrase
+
+    - name: Add known hosts
+      run: |
+        ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+
+    - name: Deploy to VPS
+      uses: appleboy/ssh-action@v0.1.5
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.VPS_DEPLOY_KEY }}
+        port: 22
+        script: |
+          cd /root/codteech
+          ./deploy.sh
