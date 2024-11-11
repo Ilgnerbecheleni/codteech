@@ -1,49 +1,89 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.nav {
+  display: flex;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  margin-left: 20px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navLink:hover {
+  color: #aaa;
+}
+
+.logoIcon {
+  margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+  font-size: 2em;     /* Ajuste o tamanho do ícone */
+  color: #ffffff;     /* Cor do ícone */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
   .nav {
-    display: flex;
+    display: none; /* Oculta o menu em telas menores */
   }
-  
-  .navList {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navItem {
-    margin-left: 20px;
-  }
-  
-  .navLink {
+
+  .menu-toggle {
+    display: block; /* Exibe o botão de menu */
+    font-size: 1.5rem;
+    cursor: pointer;
     color: white;
-    text-decoration: none;
+  }
+
+  .logo {
     font-size: 1rem;
+    font-weight: bold;
+
+    flex-direction: row;
+
   }
-  
-  .navLink:hover {
-    color: #aaa;
+
+  .nav.active {
+    display: block; /* Exibe o menu quando ativo */
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
   }
-  .logoIcon {
-    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
-    font-size: 2em;   /* Ajuste o tamanho do ícone */
-    color: #ffffff;     /* Cor do ícone */
+
+  .navList {
+    display: block;
   }
-  
+
+  .navItem {
+    margin: 10px 0;
+  }
+}
