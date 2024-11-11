@@ -1,0 +1,101 @@
+.sobreSection {
+  padding: 3rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  color: #333;
+  font-family: Arial, sans-serif;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  color: #0056b3;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.descricao {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.missaoVisao {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bloco {
+  flex: 1;
+  background-color: #f1f1f1;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.bloco:hover {
+  transform: translateY(-5px);
+}
+
+.subtitulo {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.servicos, .tecnologias {
+  margin-bottom: 2rem;
+}
+
+.listaServicos {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.listaServicos li {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.listaServicos li:hover {
+  background-color: #0056b3;
+}
+
+.botaoContato {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #0056b3;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.botaoContato:hover {
+  background-color: #004494;
+  transform: scale(1.05);
+}
