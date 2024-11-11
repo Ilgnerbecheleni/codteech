@@ -5,10 +5,7 @@ const Sobre: React.FC = () => {
   return (
     <section className={styles.sobreSection}>
       <div className={styles.intro}>
-        <h1 className={styles.titulo}>Sobre Nós</h1>
-        <p className={styles.descricao}>
-          Somos uma empresa focada em soluções tecnológicas inovadoras, desenvolvendo softwares que impulsionam o sucesso dos nossos clientes. Acreditamos no poder da tecnologia para transformar ideias em realidade.
-        </p>
+     
       </div>
 
       <div className={styles.missaoVisao}>

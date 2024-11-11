@@ -1,6 +1,7 @@
 
 import './App.css'
 import Header from './components/header'
+import Home from './components/Home'
 import Sobre from './components/Sobre'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
     <>
    <Header/>
+   <Home/>
    <Sobre/>
     </>
   )
