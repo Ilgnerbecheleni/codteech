@@ -32,10 +32,7 @@ const Sobre: React.FC = () => {
         </ul>
       </div>
 
-      <div className={styles.tecnologias}>
-        <h2 className={styles.subtitulo}>Tecnologias Utilizadas</h2>
-        <p>React, Node.js, Python, MongoDB, entre outras.</p>
-      </div>
+    
 
       <a href="/contato" className={styles.botaoContato}>Entre em Contato</a>
     </section>
