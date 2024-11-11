@@ -40,3 +40,47 @@
   font-size: 1.25rem;
   line-height: 1.6;
 }
+
+/* Estilos para responsividade */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .text {
+    font-size: 1.15rem;
+  }
+
+  .content {
+    padding: 15px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+
+  .content {
+    padding: 8px;
+  }
+}

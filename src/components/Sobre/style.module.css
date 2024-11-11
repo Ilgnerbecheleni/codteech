@@ -99,3 +99,72 @@
   background-color: #004494;
   transform: scale(1.05);
 }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .titulo {
+    font-size: 2rem;
+  }
+
+  .descricao {
+    font-size: 1.1rem;
+  }
+
+  .missaoVisao {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subtitulo {
+    font-size: 1.6rem;
+  }
+
+  .bloco {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 1.8rem;
+  }
+
+  .descricao {
+    font-size: 1rem;
+  }
+
+  .subtitulo {
+    font-size: 1.5rem;
+  }
+
+  .bloco {
+    padding: 1rem;
+  }
+
+  .botaoContato {
+    padding: 0.7rem 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.5rem;
+  }
+
+  .descricao {
+    font-size: 0.9rem;
+  }
+
+  .subtitulo {
+    font-size: 1.3rem;
+  }
+
+  .bloco {
+    padding: 0.8rem;
+  }
+
+  .botaoContato {
+    padding: 0.6rem 1.2rem;
+  }
+}
