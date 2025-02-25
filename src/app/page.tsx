@@ -6,7 +6,7 @@ export default function Home() {
   return (
 <div className="flex align-middle flex-col">
 <Banner 
-        imageUrl="/mundo.jpg" 
+        imageUrl="./mundo.jpg" 
         title="Bem-vindo à CodTeech" 
         subtitle="Transformando ideias em soluções tecnológicas." 
       />
